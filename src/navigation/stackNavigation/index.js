@@ -1,26 +1,26 @@
-import {  StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-import Loader from"../../pages/Loader";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import Welcome from"../../pages/Welcome";
-import { createStackNavigator} from "@react-navigation/stack";
+import Welcome from "../../pages/Welcome";
+import { createStackNavigator } from "@react-navigation/stack";
+
 const Navigation = () => {
-    const stack = createStackNavigator();
-    return(
+  const Stack = createStackNavigator();
+
+  return (
     <NavigationContainer>
-        <Stack.Navigator
+      <Stack.Navigator
         screenOptions={{
-        headerShown: false,
+          headerShown: false,
         }}
-        initialRouteNAME={"WELCOME"}>
-        
-        <stack.secreen name ="Welcome" components={Welcome}/>
-        <stack.secreen name ="Welcome" components={Welcome}/>
-       </Stack.Navigator>
-       </NavigationContainer>
-    );
+        initialRouteName={"Welcome"}>
+        <Stack.Screen name="Welcome" component={Welcome} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
- export default Navigation;
-  const Style = StyleSheet.create({});
+export default Navigation;
+
+const styles = StyleSheet.create({});

@@ -1,12 +1,10 @@
-import { View, Text } from 'react-native'
+import { StyleSheet } from "react-native";
 
-export const conainerStyle = StyleSheet.create({
-  conainer:{
-    flex:1,
-   justifyContent:"center",
-    alignItems:"center",
+export const containerStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  backgroundImageOpecity:{
-    opacity:0.5,
-  },
+
 });
