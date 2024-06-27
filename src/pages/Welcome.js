@@ -34,7 +34,7 @@ const Welcome = () => {
         borderwidth:2,
         padding: 12,
         }}
-         GALLERY APP
+    GALLERY APP
     
     </Text>
 
@@ -45,6 +45,6 @@ const Welcome = () => {
     );
     };
      export default Welcome;
-        const style = StyleSheet.create({});
+     const style = StyleSheet.create({});
 
   
