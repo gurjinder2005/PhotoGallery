@@ -5,16 +5,16 @@ import CustomButton from "../components/CustomButton";
 import Loader from "../components/Loader";
 import { containerStyle } from "../styles";
 
-const WelcomeImage = require("../../assets/img/welcome.jpg");
+const WelcomeImage = require("../../assets/img/Welcome.jpg");
 
 const Welcome = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <>
       {isLoading === false ? (
         <ImageBackground
           source={WelcomeImage}
-          style={[containerStyle.container, {}]}>
+          style={[containerStyle.container, {height : "100%" , width : "100%"}]}>
           <View
             style={{
               flex: 4,
