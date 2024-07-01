@@ -25,7 +25,7 @@ const BottomTabNavigation = () => {
           component={HomeScreen}
           listeners={{
             tabPress() {
-              setTabBackground("blue");
+              setTabBackground("silver");
             },
           }}
           options={{
@@ -40,7 +40,7 @@ const BottomTabNavigation = () => {
           component={DetailsScreen}
           listeners={{
             tabPress() {
-              setTabBackground("cyan");
+              setTabBackground("azure");
             },
           }}
           options={{
@@ -60,7 +60,7 @@ const BottomTabNavigation = () => {
           component={HomeScreen}
           listeners={{
             tabPress() {
-              setTabBackground("green");
+              setTabBackground("gray");
             },
           }}
           options={{
