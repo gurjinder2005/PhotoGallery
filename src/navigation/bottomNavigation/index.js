@@ -44,11 +44,11 @@ const BottomTabNavigation = () => {
             },
           }}
           options={{
-            tabBarLabel: "Updates",
+            tabBarLabel: "Photos",
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
                 onPre
-                name="bell"
+                name="folder"
                 color={color}
                 size={26}
               />
