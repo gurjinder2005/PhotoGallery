@@ -1,19 +1,19 @@
 import AnDesign from "react-native-vector-icons/AntDesign";
-
+import DetailsScreen from "../../pages/DetailsScreen";
+import HomeScreen from "./../../pages/HomeScreen";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { NavigationContainer } from "@react-navigation/native";
+import Profile from "../../pages/ProfileScreen";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { useState } from "react";
-
-import HomeScreen from './../../pages/HomeScreen';
-import DetailsScreen from "../../pages/DetailsScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 
 const BottomTabNavigation = () => {
   const [tabBackground, setTabBackground] = useState();
   return (
-    <NavigationContainer>
+    <>
       <Tab.Navigator
         activeColor="black"
         inactiveColor="#3e2465"
@@ -29,9 +29,13 @@ const BottomTabNavigation = () => {
             },
           }}
           options={{
-            tabBarLabel: "Home",
+            tabBarLabel: "Explore",
             tabBarIcon: ({ color }) => (
-              <AnDesign name="home" color={color} size={26} />
+              <MaterialCommunityIcons
+                name="image-search"
+                color={color}
+                size={26}
+              />
             ),
           }}
         />
@@ -44,11 +48,11 @@ const BottomTabNavigation = () => {
             },
           }}
           options={{
-            tabBarLabel: "Photos",
+            tabBarLabel: "My Gallery ",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
+              <MaterialIcons
                 onPre
-                name="folder"
+                name="photo-library"
                 color={color}
                 size={26}
               />
@@ -57,21 +61,21 @@ const BottomTabNavigation = () => {
         />
         <Tab.Screen
           name="Profile"
-          component={HomeScreen}
+          component={Profile}
           listeners={{
             tabPress() {
               setTabBackground("gray");
             },
           }}
           options={{
-            tabBarLabel: "Profile",
+            tabBarLabel: "About",
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="account" color={color} size={26} />
             ),
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
+    </>
   );
 };
 
